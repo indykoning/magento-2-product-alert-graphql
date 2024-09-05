@@ -17,10 +17,10 @@ use Magento\Framework\GraphQl\Schema\Type\ResolveInfo;
 class Stock implements ResolverInterface
 {
     public function __construct(
-        \Magento\Catalog\Api\ProductRepositoryInterface $productRepository,
-        \Magento\Customer\Model\Customer $customer,
-        \Magento\Store\Model\StoreManagerInterface $storeManager,
-        \Magento\ProductAlert\Model\Stock $stock
+        protected \Magento\Catalog\Api\ProductRepositoryInterface $_productRepository,
+        protected \Magento\Customer\Model\Customer $_customer,
+        protected \Magento\Store\Model\StoreManagerInterface $_storeManager,
+        protected \Magento\ProductAlert\Model\Stock $_stock
     ) {
         $this->_productRepository = $productRepository;
         $this->_customer = $customer;
