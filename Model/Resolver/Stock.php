@@ -22,10 +22,6 @@ class Stock implements ResolverInterface
         protected \Magento\Store\Model\StoreManagerInterface $_storeManager,
         protected \Magento\ProductAlert\Model\Stock $_stock
     ) {
-        $this->_productRepository = $productRepository;
-        $this->_customer = $customer;
-        $this->_storeManager = $storeManager;
-        $this->_stock = $stock;
     }
 
     public function resolve(Field $field, $context, ResolveInfo $info, array $value = null, array $args = null)
